@@ -200,6 +200,7 @@ public class PublicationPage extends BasePage {
     //==============================================MY METHODS==================================================
 
     public void checkRequiresFields() {
+        logger.info("Check Requires Fields");
         elementVisibility(savePublicationButton, driver).click();
         elementVisibility(requireField1, driver);
         elementVisibility(requireField2, driver);
@@ -247,6 +248,7 @@ public class PublicationPage extends BasePage {
     }
 
     public void creationNewPublicationForContentOperator() throws InterruptedException, AWTException {
+        logger.info("creation new publication for content operator");
         //fill name of material level
         elementVisibility(nameOfMaterialInputField, driver).sendKeys("Autotest");
 
@@ -293,7 +295,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection ss = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\1.png");
+        StringSelection ss = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\1.png");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
         Robot robot = new Robot();
@@ -314,7 +316,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection s = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Flow Git.docx");
+        StringSelection s = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Flow Git.docx");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
 
         Robot r = new Robot();
@@ -336,7 +338,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection str = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Framework_Documentation.pdf");
+        StringSelection str = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Framework_Documentation.pdf");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 
         Robot robo = new Robot();
@@ -358,7 +360,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection stringSelection = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document.txt");
+        StringSelection stringSelection = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document.txt");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
         Robot rob = new Robot();
@@ -380,7 +382,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection stringSel = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document (2).txt");
+        StringSelection stringSel = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document (2).txt");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSel, null);
 
         Robot ro = new Robot();
@@ -426,7 +428,53 @@ public class PublicationPage extends BasePage {
         Thread.sleep(2000);
     }
 
+    public void changeNewCreatedPublicationForContentOperator() throws InterruptedException, AWTException {
+        logger.info("Change New Created Publication For Content Operator");
+        //fill name of material level
+        elementVisibility(nameOfMaterialInputField, driver).clear();
+        elementVisibility(nameOfMaterialInputField, driver).sendKeys("NewAutotest");
+
+        //fill name of material author
+        elementVisibility(authorInputField, driver).clear();
+        elementVisibility(authorInputField, driver).sendKeys("Alex");
+
+        //fill name of material date
+        elementVisibility(dateOfSignature, driver).clear();
+        elementVisibility(dateOfSignature, driver).sendKeys("12.05.2017");
+
+        //fill description of material level
+        elementVisibility(descriptionOfMaterialInputField, driver).clear();
+        elementVisibility(descriptionOfMaterialInputField, driver).sendKeys("New Test material");
+
+        //create publication
+        elementVisibility(savePublicationButton, driver).click();
+        Thread.sleep(2000);
+    }
+
+    public void changeNewCreatedPublicationForAnalitic() throws InterruptedException, AWTException {
+        logger.info("Change New Created Publication For Analitic");
+        elementVisibility(nameOfMaterialInputField, driver).clear();
+        elementVisibility(nameOfMaterialInputField, driver).sendKeys("NewAutotest");
+
+        //fill name of material author
+        elementVisibility(authorInputField, driver).clear();
+        elementVisibility(authorInputField, driver).sendKeys("Alex");
+
+        //fill name of material date
+        elementVisibility(dateOfSignature, driver).clear();
+        elementVisibility(dateOfSignature, driver).sendKeys("12.05.2017");
+
+        //fill description of material level
+        elementVisibility(descriptionOfMaterialInputField, driver).clear();
+        elementVisibility(descriptionOfMaterialInputField, driver).sendKeys("New Test material");
+
+        //create publication
+        elementVisibility(savePublicationButton, driver).click();
+        Thread.sleep(2000);
+    }
+
     public void creationNewPublicationForAnalitic() throws InterruptedException, AWTException, IOException {
+        logger.info("Creation New Publication For Analitic");
         //fill name of material level
         elementVisibility(nameOfMaterialInputField, driver).sendKeys("Autotest");
 
@@ -474,7 +522,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection s1 = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\1.png");
+        StringSelection s1 = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\1.png");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s1, null);
 
         Robot r1 = new Robot();
@@ -495,7 +543,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection s2 = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Flow Git.docx");
+        StringSelection s2 = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Flow Git.docx");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s2, null);
 
         Robot r2 = new Robot();
@@ -517,7 +565,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection s3 = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Framework_Documentation.pdf");
+        StringSelection s3 = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\Framework_Documentation.pdf");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s3, null);
 
         Robot r3 = new Robot();
@@ -538,7 +586,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection s4 = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document.txt");
+        StringSelection s4 = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document.txt");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s4, null);
 
         Robot r4 = new Robot();
@@ -559,7 +607,7 @@ public class PublicationPage extends BasePage {
         elementVisibility(attachedFielsDownloafButton, driver).click();
         Thread.sleep(5000);
 
-        StringSelection s5 = new StringSelection("C:\\TestNG\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document (2).txt");
+        StringSelection s5 = new StringSelection("C:\\IBS-autotests-master\\test_parallel_running\\src\\main\\java\\utils\\docs_and_images\\New Text Document (2).txt");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s5, null);
 
         Robot r5 = new Robot();

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static org.testng.Assert.assertTrue;
 import static utils.Constants.*;
 
 /**
@@ -95,6 +96,7 @@ public class MainPage extends BasePage {
     }
 
     public void assertionOFCreatedPublicationForContentOperator() {
+        logger.info("Assertion of created publication for content operator");
         elementVisibility(createdRubricAssertion, driver);
         elementVisibility(dateOfSignatureNewCreatedRubric, driver);
         elementVisibility(publishedNewCreatedRubric, driver);
@@ -103,24 +105,63 @@ public class MainPage extends BasePage {
         elementVisibility(br, driver);
         elementVisibility(rubrics, driver);
         elementVisibility(templateButton, driver);
-        elementVisibility(editButto, driver);
+        elementVisibility(editButto, driver).click();
+
     }
 
     public void assertionOFCreatedPublicationForAnalitic() {
+        logger.info("Assertion of created publication for Analitic");
         elementVisibility(createdRubricAssertion, driver);
+        assertTrue(createdRubricAssertion.getText().contains("Autotest"));
+
         elementVisibility(dateOfSignatureNewCreatedRubric, driver);
-        elementVisibility(publishedNewCreatedRubric, driver);
+        assertTrue(dateOfSignatureNewCreatedRubric.getText().contains("3.05.2017"));
+
         elementVisibility(publishedNewCreatedAuthor, driver);
-        elementVisibility(publishedNewCreatedRUBRICForAnalitic, driver);
-        elementVisibility(mi, driver);
+        assertTrue(publishedNewCreatedAuthor.getText().contains("Sergey"));
+
+        elementVisibility(rubrics, driver);
+        elementVisibility(templateButton, driver);
+        elementVisibility(editButto, driver);
+        elementVisibility(editButto, driver).click();
+    }
+
+    public void assertionOFCreatedPublicationForContentOperatorAfterChanging() {
+        logger.info("Assertion OF CreatedPublication For Content Operator After Changing");
+        elementVisibility(createdRubricAssertion, driver);
+        assertTrue(createdRubricAssertion.getText().contains("NewAutotest"));
+
+        elementVisibility(dateOfSignatureNewCreatedRubric, driver);
+        assertTrue(dateOfSignatureNewCreatedRubric.getText().contains("12.05.2017"));
+
+        elementVisibility(publishedNewCreatedAuthor, driver);
+        assertTrue(publishedNewCreatedAuthor.getText().contains("Alex"));
+
+        elementVisibility(rubrics, driver);
+        elementVisibility(templateButton, driver);
+        elementVisibility(editButto, driver);
+    }
+
+    public void assertionOFCreatedPublicationForAnliticAfterChanging() {
+        logger.info("Assertion OF Created Publication For Analitic AfterChanging");
+        elementVisibility(createdRubricAssertion, driver);
+        assertTrue(createdRubricAssertion.getText().contains("NewAutotest"));
+
+        elementVisibility(dateOfSignatureNewCreatedRubric, driver);
+        assertTrue(dateOfSignatureNewCreatedRubric.getText().contains("12.05.2017"));
+
+        elementVisibility(publishedNewCreatedAuthor, driver);
+        assertTrue(publishedNewCreatedAuthor.getText().contains("Alex"));
+
         elementVisibility(rubrics, driver);
         elementVisibility(templateButton, driver);
         elementVisibility(editButto, driver);
     }
 
     public void deleteNewCreatedPublication() {
+        logger.info("Delete New Created Publication");
         elementVisibility(deleteButton, driver).click();
         elementVisibility(deleteNewRubricButton, driver).click();
-        elementInvisibility(By.xpath("//div/a[contains(text(),'Autotest')]"), driver);
+        elementInvisibility(By.xpath("//div/a[contains(text(),'NewAutotest')]"), driver);
     }
 }

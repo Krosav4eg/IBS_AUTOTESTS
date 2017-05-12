@@ -14,14 +14,14 @@ import java.io.IOException;
  */
 public class fpspm131_PublicationOfMaterialOfAnalitic extends BaseTest {
 
-    @Test
+    @Test (priority=1)
     public void authorizationAnaliticTest() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.authorization("dbn_analyst_ca","2wsx2WSX");
+        loginPage.authorization("dbn_analyst_ca", "2wsx2WSX");
         loginPage.checkAnaliticRoleName();
     }
 
-    @Test
+    @Test (priority=2)
     public void creationOfNewPublicationTest() throws InterruptedException, AWTException, IOException {
         PublicationPage publicationPage = new PublicationPage(driver);
         publicationPage.publicationPageISDisplayed();
@@ -29,25 +29,32 @@ public class fpspm131_PublicationOfMaterialOfAnalitic extends BaseTest {
         publicationPage.creationNewPublicationForAnalitic();
     }
 
-    @Test
+    @Test(priority=3)
     public void verifyNewCreatedRubric() throws InterruptedException, AWTException {
         MainPage mainPage = new MainPage(driver);
         mainPage.mainPageIsDisplayed();
         mainPage.assertionOFCreatedPublicationForAnalitic();
     }
 
-    @Test
+    @Test(priority = 4)
+    public void verifyNewCreatedRubricChanging() throws InterruptedException, AWTException {
+        PublicationPage publicationPage = new PublicationPage(driver);
+        publicationPage.allNeededTabsInPublicationPageIsDisplayed();
+        publicationPage.changeNewCreatedPublicationForAnalitic();
+    }
+
+    @Test(priority = 5)
+    public void verifyNewCreatedRubricAgain() throws InterruptedException, AWTException {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.mainPageIsDisplayed();
+        mainPage.assertionOFCreatedPublicationForAnliticAfterChanging();
+    }
+
+    @Test(priority = 6)
     public void verifyOfDeletionNewCreatedRubric() {
         MainPage mainPage = new MainPage(driver);
         mainPage.deleteNewCreatedPublication();
     }
-
-
-
-
-
-
-
 
 
 }

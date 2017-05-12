@@ -19,11 +19,13 @@ public class Constants {
     public static final String ORG_LEVEL_BLOCK = "(//fieldset[@class='fpspm-simple-fieldset'])[1]";
     public static final String THEME_RUBRIC_BLOCK = "(//fieldset[@class='fpspm-simple-fieldset'])[2]";
     public static final String TEST_DATA_RIGHT_SECTION = "//div[@class='ui-datagrid-content ui-widget-content ui-datagrid-col-1']";
-    public static final String CREATED_RUBRIC_ASSERTION = "//div/a[contains(text(),'Autotest')]";
+    public static final String CREATED_RUBRIC_ASSERTION = "(//div/a[@class='name'])[1]";
     //========================
-    public static final String DATE_OF_SIGNATURE_NEWCREATED_RUBRIC = "(//div[contains(text(),'03.05.2017')])[1]";
-    public static final String PUBLISED_NEWCREATED_RUBRIC = "(//div[contains(text(),'03.05.2017')])[2]";
-    public static final String PUBLISED_NEWCREATED_AUTHOR = "//div[contains(text(),'Sergey')]";
+    public static final String DATE_OF_SIGNATURE_NEWCREATED_RUBRIC = "(//div[@class='ui-grid-col-7 fpspm-small-value'])[2]";
+    public static final String PUBLISED_NEWCREATED_RUBRIC = "(//div[@class='ui-grid-col-7 fpspm-small-value'])[3]";
+
+    public static final String PUBLISED_NEWCREATED_AUTHOR = "(//div[@class='ui-grid-col-7 fpspm-small-value'])[4]";
+
     public static final String PUBLISED_PERSON_NEWCREATED_RUBRIC = "//div[contains(text(),'ДБН dbn_content_operator')]";
     public static final String PUBLISED_PERSON_NEWCREATED_RUBRIC_FOR_ANALITIC = "//div[contains(text(),'ДБН dbn_analyst_ca')]";
     public static final String BR = "//div[contains(text(),'Материалы для ГУП')]";
