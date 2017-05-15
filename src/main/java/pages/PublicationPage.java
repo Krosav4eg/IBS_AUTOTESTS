@@ -487,25 +487,9 @@ public class PublicationPage extends BasePage {
 
         //create rubric level for ANALITIC ROLE
         elementVisibility(selectOrgObjects, driver).click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         elementVisibility(tuBankOfRussiaTab, driver).click();
-        elementVisibility(volgoViatskaMi, driver).click();
-        Thread.sleep(1000);
-        elementVisibility(miDispalyedInTable, driver);
-        elementVisibility(brDisplayedVheckboxInTable, driver);
-        Thread.sleep(1000);
-        elementVisibility(saveOrgTemplateButton, driver).click();
-        elementVisibility(getPublishPage, driver);
-        Thread.sleep(1000);
-
-        //  check trash button for org level rubricator
-        elementVisibility(materialsForGroupIsDisplayedDeleteButton, driver).click();
-        elementInvisibility(By.xpath("//tr/td[2][contains(text(),'МИ по Дальневосточному ФО')]"), driver);
-
-        //create rubric level for ANALITIC ROLE
-        elementVisibility(selectOrgObjects, driver).click();
-        Thread.sleep(1000);
-        elementVisibility(tuBankOfRussiaTab, driver).click();
+        Thread.sleep(2000);
         elementVisibility(volgoViatskaMi, driver).click();
         Thread.sleep(1000);
         elementVisibility(miDispalyedInTable, driver);
@@ -626,24 +610,14 @@ public class PublicationPage extends BasePage {
 
         //select theme rubric button
         elementVisibility(selectThemeRzubricatorButton, driver).click();
+        Thread.sleep(1000);
         elementVisibility(selectRubricatorPlusButton, driver).click();
+        Thread.sleep(1000);
         elementVisibility(selectRubricatorDisplayed, driver);
+        Thread.sleep(1000);
         elementVisibility(selectRubricatorSave, driver).click();
         elementVisibility(selectRubricatorDispalyed, driver);
         Thread.sleep(1000);
-
-        //check trash button for theme rubricator
-        elementVisibility(trashHolderOFselectRubricatorDispalyed, driver).click();
-        elementInvisibility(By.xpath("//div/p[contains(text(),'Рубрика')]"), driver);
-        Thread.sleep(1000);
-
-        //select theme rubric button again
-        elementVisibility(selectThemeRzubricatorButton, driver).click();
-        Thread.sleep(5000);
-        elementVisibility(selectRubricatorPlusButton, driver).click();
-        elementVisibility(selectRubricatorDisplayed, driver);
-        elementVisibility(selectRubricatorSave, driver).click();
-        elementVisibility(selectRubricatorDispalyed, driver);
 
         //create publication
         elementVisibility(savePublicationButton, driver).click();

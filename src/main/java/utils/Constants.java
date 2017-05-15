@@ -35,6 +35,14 @@ public class Constants {
     public static final String EDIT_BUTTON = "//i[@class='fa fa-pencil-square-o fa-lg']";
     public static final String DELETE_BUTTON = "//i[@class='fa fa-trash fa-lg']";
     public static final String DELETE_NEW_RUBRIC_BUTTON = "//button/span[contains(text(),'OK')]";
+    //========================search input fields
+    public static final String SEARCH_BY_MATERIAL_ID = "//input[@name='id']";
+    public static final String FIND = "//input[@name='title']";
+    public static final String FIND_BY_DATE = "//input[@data-field='publishDate']";
+    public static final String FIND_BY_PERIOD_FROM = "//input[@name='periodFrom']";
+    public static final String FIND_BY_PERIOD_TO = "//input[@name='periodTo']";
+
+
 
     //========================Publication PAGE=============================================
     public static final String PUBLISHING_PAGE = "//a[contains(text(),'Публикация')]";

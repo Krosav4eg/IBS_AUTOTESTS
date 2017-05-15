@@ -6,7 +6,7 @@
            skipped="0"
            time="193.998">
   <properties />
-            <testcase name="createNewThemeRubricTest" time="58.129" classname="regressionSuit.fpspm140_WorkWithRubricatorTest">
+            <testcase name="createNewThemeRubricTest" time="58.129" classname="regressionSuit.fpspm137_WorkWithRubricatorTest">
                 <failure type="org.openqa.selenium.NoSuchElementException"
                   message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//tr/td/span[2])[1]&quot;}
   (Session info: chrome=58.0.3029.81)
@@ -45,7 +45,7 @@ Session ID: 8c57eca3a3cfb3fa3d2c86ac452c7e53
   org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
   com.sun.proxy.$Proxy6.getText(Unknown Source)
   pages.ThemeRubricatorPage.checkChangeOfNewAddedRubric(ThemeRubricatorPage.java:144)
-  regressionSuit.fpspm140_WorkWithRubricatorTest.createNewThemeRubricTest(fpspm140_WorkWithRubricatorTest.java:27)
+  regressionSuit.fpspm137_WorkWithRubricatorTest.createNewThemeRubricTest(fpspm140_WorkWithRubricatorTest.java:27)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,8 +72,8 @@ Session ID: 8c57eca3a3cfb3fa3d2c86ac452c7e53
           </testcase>
   
   
-            <testcase name="newRubricWasSuccessfullyDeletedTest" time="3.407" classname="regressionSuit.fpspm140_WorkWithRubricatorTest" />
-                <testcase name="authorizationOperatorContentTest" time="47.873" classname="regressionSuit.fpspm140_WorkWithRubricatorTest" />
-                <testcase name="deleteNewRubricTest" time="84.589" classname="regressionSuit.fpspm140_WorkWithRubricatorTest" />
+            <testcase name="newRubricWasSuccessfullyDeletedTest" time="3.407" classname="regressionSuit.fpspm137_WorkWithRubricatorTest" />
+                <testcase name="authorizationOperatorContentTest" time="47.873" classname="regressionSuit.fpspm137_WorkWithRubricatorTest" />
+                <testcase name="deleteNewRubricTest" time="84.589" classname="regressionSuit.fpspm137_WorkWithRubricatorTest" />
       
 </testsuite>

@@ -80,6 +80,22 @@ public class MainPage extends BasePage {
     @FindBy(xpath = DELETE_NEW_RUBRIC_BUTTON)
     private WebElement deleteNewRubricButton;
 
+    //-------------------------------------SEARCH MATERIAL-------------------------------
+    @FindBy(xpath = SEARCH_BY_MATERIAL_ID)
+    private WebElement searchByMaterislId;
+
+    @FindBy(xpath = FIND)
+    private WebElement find;
+
+    @FindBy(xpath = FIND_BY_DATE)
+    private WebElement findByDate;
+
+    @FindBy(xpath = FIND_BY_PERIOD_FROM)
+    private WebElement findByPeriodFrom;
+
+    @FindBy(xpath = FIND_BY_PERIOD_TO)
+    private WebElement findByPeriodTo;
+
     //--------------------------------------MY METHODS--------------------------------------------------
 
     public void mainPageIsDisplayed() throws InterruptedException {
@@ -156,6 +172,68 @@ public class MainPage extends BasePage {
         elementVisibility(rubrics, driver);
         elementVisibility(templateButton, driver);
         elementVisibility(editButto, driver);
+    }
+
+    public void searchByMaterial() throws InterruptedException {
+        logger.info("Search by field find");
+        elementVisibility(find, driver).sendKeys("NewAutotest");
+        Thread.sleep(4000);
+
+        elementVisibility(createdRubricAssertion, driver);
+        assertTrue(createdRubricAssertion.getText().contains("NewAutotest"));
+
+        elementVisibility(dateOfSignatureNewCreatedRubric, driver);
+        assertTrue(dateOfSignatureNewCreatedRubric.getText().contains("12.05.2017"));
+
+        elementVisibility(publishedNewCreatedAuthor, driver);
+        assertTrue(publishedNewCreatedAuthor.getText().contains("Alex"));
+
+        elementVisibility(rubrics, driver);
+        elementVisibility(templateButton, driver);
+        elementVisibility(editButto, driver);
+        elementVisibility(find, driver).clear();
+//========================
+
+        logger.info("Search by field date");
+        elementVisibility(findByDate, driver).sendKeys("12.05.2017");
+        Thread.sleep(4000);
+
+        elementVisibility(createdRubricAssertion, driver);
+        assertTrue(createdRubricAssertion.getText().contains("NewAutotest"));
+
+        elementVisibility(dateOfSignatureNewCreatedRubric, driver);
+        assertTrue(dateOfSignatureNewCreatedRubric.getText().contains("12.05.2017"));
+
+        elementVisibility(publishedNewCreatedAuthor, driver);
+        assertTrue(publishedNewCreatedAuthor.getText().contains("Alex"));
+
+        elementVisibility(rubrics, driver);
+        elementVisibility(templateButton, driver);
+        elementVisibility(editButto, driver);
+        elementVisibility(findByDate, driver).clear();
+        //========================
+
+
+        logger.info("Search by field from period");
+        elementVisibility(findByPeriodFrom, driver).sendKeys("3.05.2017");
+        Thread.sleep(4000);
+        elementVisibility(findByPeriodTo, driver).sendKeys("12.05.2017");
+        Thread.sleep(4000);
+
+        elementVisibility(createdRubricAssertion, driver);
+        assertTrue(createdRubricAssertion.getText().contains("NewAutotest"));
+
+        elementVisibility(dateOfSignatureNewCreatedRubric, driver);
+        assertTrue(dateOfSignatureNewCreatedRubric.getText().contains("12.05.2017"));
+
+        elementVisibility(publishedNewCreatedAuthor, driver);
+        assertTrue(publishedNewCreatedAuthor.getText().contains("Alex"));
+
+        elementVisibility(rubrics, driver);
+        elementVisibility(templateButton, driver);
+        elementVisibility(editButto, driver);
+
+
     }
 
     public void deleteNewCreatedPublication() {

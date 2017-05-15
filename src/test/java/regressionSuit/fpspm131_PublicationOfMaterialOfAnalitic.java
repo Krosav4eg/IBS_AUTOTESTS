@@ -51,6 +51,13 @@ public class fpspm131_PublicationOfMaterialOfAnalitic extends BaseTest {
     }
 
     @Test(priority = 6)
+    public void searchBySimpleOfMaterial() throws InterruptedException {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.mainPageIsDisplayed();
+        mainPage.searchByMaterial();
+    }
+
+    @Test(priority = 7)
     public void verifyOfDeletionNewCreatedRubric() {
         MainPage mainPage = new MainPage(driver);
         mainPage.deleteNewCreatedPublication();

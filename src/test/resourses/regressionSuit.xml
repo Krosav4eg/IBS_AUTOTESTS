@@ -32,7 +32,7 @@
     <!--<test name="WorkWithRubricatorTest">-->
     <!--<parameter name="browser" value="chrome"/>-->
     <!--<classes>-->
-    <!--<class name="regressionSuit.fpspm140_WorkWithRubricatorTest"/>-->
+    <!--<class name="regressionSuit.fpspm137_WorkWithRubricatorTest"/>-->
     <!--</classes>-->
     <!--</test>-->
 

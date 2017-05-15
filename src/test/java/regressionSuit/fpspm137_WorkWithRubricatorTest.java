@@ -9,7 +9,7 @@ import pages.ThemeRubricatorPage;
  * Created by Sergey_Potapov
  */
 
-public class fpspm140_WorkWithRubricatorTest extends BaseTest {
+public class fpspm137_WorkWithRubricatorTest extends BaseTest {
     @Test
     public void authorizationOperatorContentTest() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
