@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AnaliticTest"
+<testsuite name="Test OperatorContentTest"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="31.431">
+           time="33.316">
   <properties />
   
   
-            <testcase name="publishPageTest" time="4.313" classname="regressionSuit.fpspm130_AnaliticTest" />
-                <testcase name="authorizationAnaliticTest" time="14.424" classname="regressionSuit.fpspm130_AnaliticTest" />
-                <testcase name="mainPageTest" time="7.066" classname="regressionSuit.fpspm130_AnaliticTest" />
-                <testcase name="myRightsPageTest" time="5.628" classname="regressionSuit.fpspm130_AnaliticTest" />
+            <testcase name="myRightsPageTest" time="5.644" classname="regressionSuit.fpspm130_AnaliticTest" />
+                <testcase name="publishPageTest" time="4.798" classname="regressionSuit.fpspm130_AnaliticTest" />
+                <testcase name="authorizationAnaliticTest" time="15.606" classname="regressionSuit.fpspm130_AnaliticTest" />
+                <testcase name="mainPageTest" time="7.268" classname="regressionSuit.fpspm130_AnaliticTest" />
       
 </testsuite>

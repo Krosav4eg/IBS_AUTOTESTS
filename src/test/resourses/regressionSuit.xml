@@ -1,32 +1,29 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="regressionSuit" >
+<suite name="regressionSuit" parallel="tests" thread-count="3">
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-        <listener class-name="listner.ListenerTest"/>
+
     </listeners>
-
-    <!--Role Separation Test-->
-
-    <!--<test name="OperatorContentTest">-->
+    <test name="Test OperatorContentTest" verbose="1">
         <!--<parameter name="browser" value="chrome"/>-->
-        <!--<classes>-->
-            <!--<class name="regressionSuit.fpspm130_OperatorContentTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="CordinatorTest">-->
+        <classes>
+            <class name="regressionSuit.fpspm130_AnaliticTest"/>
+        </classes>
+    </test>
+    <test name="Test AnaliticTest" verbose="2">
         <!--<parameter name="browser" value="chrome"/>-->
-        <!--<classes>-->
-            <!--<class name="regressionSuit.fpspm130_CordinatorTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="AnaliticTest">-->
+        <classes>
+            <class name="regressionSuit.fpspm130_CordinatorTest"/>
+        </classes>
+    </test>
+    <test name="Test CordinatorTest" verbose="3">
         <!--<parameter name="browser" value="chrome"/>-->
-        <!--<classes>-->
-            <!--<class name="regressionSuit.fpspm130_AnaliticTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
+        <classes>
+            <class name="regressionSuit.fpspm130_OperatorContentTest"/>
+        </classes>
+    </test>
 
     <!--workWithRubricatorTestSuit-->
 
@@ -40,10 +37,10 @@
     <!--AssignAccessRightsManuallyByTheCoordinatorTestSuit-->
 
     <!--<test name="FiltrationByUnitsTest">-->
-    <!--<parameter name="browser" value="chrome"/>-->
-    <!--<classes>-->
-    <!--<class name="regressionSuit.fpspm141_FiltrationByUnitsTest"/>-->
-    <!--</classes>-->
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<classes>-->
+            <!--<class name="regressionSuit.fpspm141_FiltrationByUnitsTest"/>-->
+        <!--</classes>-->
     <!--</test>-->
 
     <!--<test name="SearchingByParametersTest">-->
@@ -64,18 +61,19 @@
     <!--Publication Of Material-->
 
     <!--<test name="PublicationOfMaterialOfAnalitic" >-->
-        <!--<parameter name="browser" value="chrome"/>-->
-        <!--<classes>-->
-            <!--<class name="regressionSuit.fpspm131_PublicationOfMaterialOfAnalitic"/>-->
-        <!--</classes>-->
+    <!--<parameter name="browser" value="chrome"/>-->
+    <!--<classes>-->
+    <!--<class name="regressionSuit.fpspm131_PublicationOfMaterialOfAnalitic"/>-->
+    <!--</classes>-->
     <!--</test>-->
 
 
-    <test name="PublicationOfMaterialOfContentOperator" >
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="regressionSuit.fpspm131_PublicationOfMaterialOfContentOperator"/>
-        </classes>
-    </test>
+    <!--<test name="PublicationOfMaterialOfContentOperator" >-->
+    <!--<parameter name="browser" value="chrome"/>-->
+    <!--<classes>-->
+    <!--<class name="regressionSuit.fpspm131_PublicationOfMaterialOfContentOperator"/>-->
+    <!--</classes>-->
+    <!--</test>-->
+
 
 </suite>

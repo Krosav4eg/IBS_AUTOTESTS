@@ -210,20 +210,20 @@ public class ManagementOfAccessRightsPage extends BasePage {
 
     //==========================================================================================================
     public void managementOfAccessRightPageIsDisplayed() {
-        //logger.info("Assertion that management Of Access Right Page Is Displayed");
+        logger.info("Assertion that management Of Access Right Page Is Displayed");
         elementVisibility(fpsPmTab, driver).click();
         fpsPmTab.click();
         elementVisibility(managemetOfAccessRights, driver);
     }
 
     public void allNeededSectionAreDisplayedInManagePage() {
-        // logger.info("Assertion that all NeededSection Are Displayed In Manage Page");
+        logger.info("Assertion that all NeededSection Are Displayed In Manage Page");
         elementVisibility(searchParametersSection, driver);
         elementVisibility(resultsOfSearchTable, driver);
     }
 
     public void searchOfUserLastNameOnManagePage() throws InterruptedException {
-        //logger.info("search of User Last Name On Manage Page");
+        logger.info("search of User Last Name On Manage Page");
         fillInputField(inputLastNameField, driver, "ДБН dbn_content_operator");
         elementVisibility(firstNameLastNameInTable, driver);
         assertTrue(firstNameLastNameInTable.getText().contains("ДБН dbn_content_operator"));
@@ -231,7 +231,7 @@ public class ManagementOfAccessRightsPage extends BasePage {
     }
 
     public void searchOfUserLoginOnManagePage() throws InterruptedException {
-        //logger.info("search of User Login On Manage Page");
+        logger.info("search of User Login On Manage Page");
         elementVisibility(inputLastNameField, driver).clear();
         fillInputField(inputLoginField, driver, "dbn_analyst_ca");
         elementVisibility(userLoginInTable, driver);
@@ -241,7 +241,7 @@ public class ManagementOfAccessRightsPage extends BasePage {
     }
 
     public void displayOnlyCAOnManagePage() throws InterruptedException {
-        // logger.info("display Only Content Analist On ManagePage");
+        logger.info("display Only Content Analist On ManagePage");
         elementVisibility(inputLoginField, driver).clear();
         elementVisibility(displayOnlyCaCheckBox, driver).click();
         waitingCustomForElement();
@@ -252,7 +252,7 @@ public class ManagementOfAccessRightsPage extends BasePage {
     }
 
     public void approvalOfRoleOnManagePage() throws InterruptedException {
-        //  logger.info("approval Of Role On Manage Page");
+        logger.info("approval Of Role On Manage Page");
         waitingCustomForElement();
         elementVisibility(unconfirmedRole, driver).click();
         elementVisibility(confirmedRoleForUserCheckBox, driver).click();
@@ -271,7 +271,7 @@ public class ManagementOfAccessRightsPage extends BasePage {
     }
 
     public void assignRubricToTheRole() throws InterruptedException {
-        // logger.info("Assign Rubric To The Role");
+        logger.info("Assign Rubric To The Role");
         waitingCustomForElement();
         elementVisibility(rubricIcon, driver).click();
         elementVisibility(selectRubricWindow, driver);
@@ -296,7 +296,7 @@ public class ManagementOfAccessRightsPage extends BasePage {
     }
 
     public void assertionRoleFilter() throws InterruptedException {
-        //  logger.info("Assertion Role Filter");
+        logger.info("Assertion Role Filter");
         waitingCustomForElement();
         moveMouseAndClickOnVisibleElementByJS(driver, dropDownRoleButton);
         elementVisibility(dropDownRoleContentButton, driver).click();
@@ -325,7 +325,7 @@ public class ManagementOfAccessRightsPage extends BasePage {
     }
 
     public void assertionDepartmentFilter() throws InterruptedException {
-        //  logger.info("Assertion Department Filter");
+        logger.info("Assertion Department Filter");
         waitingCustomForElement();
 
         moveMouseAndClickOnVisibleElementByJS(driver, dropDowndDepartmentButton);
