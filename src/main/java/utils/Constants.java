@@ -13,10 +13,32 @@ public class Constants {
     public static final String CONTENT_OPERATOR_ROLE_INDICATOR = "//li[contains(text(),'Оператор Контента ДБН')]";
     public static final String ANALITIC_ROLE_INDICATOR = "//li[contains(text(),'Аналитик ЦА ДБН')]";
     public static final String COORDINATOR_ROLE_INDICATOR = "//li[contains(text(),'Координатор ДБН')]";
+    public static final String CONTENT_OPERATOR_SZPP_ROLE_INDICATOR = "//li[contains(text(),'Оператор контента СЗПП')]";
 
     //========================MAIN PAGES=============================================
     public static final String MAIN_PAGE = "//a[contains(text(),'Главная страница')]";
+    //========================departments szpp section
     public static final String ORG_LEVEL_BLOCK = "(//fieldset[@class='fpspm-simple-fieldset'])[1]";
+    public static final String DEPARTMENTS_SZPP_ODFU_LEVEL = "//a[contains(text(),'Подразделения СЗППиОДФУ')]";
+    public static final String EDIT_DEPARTMENT_BUTTON = "//i[@class='fa fa-pencil-square-o fa-lg']";
+    //========================editing org unit window section=============================================
+    public static final String EDITING_ORG_UNIT_WINDOW = "//span[contains(text(),'Редактирование организационной единицы')]";
+    public static final String EDITING_ORG_UNIT_WINDOW_ADD_BUTTON = "(//span[contains(text(),'Добавить')])[1]";
+    public static final String EDITING_ORG_UNIT_WINDOW_EDIT_BUTTON = "(//span[contains(text(),'Изменить')])[1]";
+    public static final String EDITING_ORG_UNIT_WINDOW_TRANSFER_BUTTON = "(//span[contains(text(),'Переместить')])[1]";
+    public static final String EDITING_ORG_UNIT_WINDOW_DELETE_BUTTON = "(//span[contains(text(),'Удалить')])[1]";
+    //========================departments ADD window
+    public static final String EDITING_ORG_UNIT_WINDOW_INPUT_NAME_FIELD= "//input[@data-field='name']";
+    public static final String EDITING_ORG_UNIT_WINDOW_INPUT_NUMBER_DEPARTMENT_FIELD = "//input[@name='externalId']";
+    public static final String SAVE_BUTTON_IN_ADD_WINDOW = "(//span[contains(text(),'Сохранить')])[1]";
+    public static final String CANCEL_BUTTON_IN_ADD_WINDOW = "(//span[contains(text(),'Отмена')])[1]";
+    //========================departments ADD window section alerts
+    public static final String ADD_WINDOW_ALERT1= "(//label[contains(text(),'Это поле необходимо заполнить.')])[1]";
+    public static final String ADD_WINDOW_ALERT2= "(//label[contains(text(),'Это поле необходимо заполнить.')])[2]";
+    //========================departments ADD window section radio buttons
+    public static final String ADD_WINDOW_RADIO_BUTTON1= "//input[@data-value='IN_BEGIN']";
+    public static final String ADD_WINDOW_RADIO_BUTTON2= "//input[@data-value='IN_END']";
+    //========================
     public static final String THEME_RUBRIC_BLOCK = "(//fieldset[@class='fpspm-simple-fieldset'])[2]";
     public static final String TEST_DATA_RIGHT_SECTION = "//div[@class='ui-datagrid-content ui-widget-content ui-datagrid-col-1']";
     public static final String CREATED_RUBRIC_ASSERTION = "(//div/a[@class='name'])[1]";
@@ -55,7 +77,7 @@ public class Constants {
     public static final String DATE_OF_SIGNATURE = "//input[@name='dateSign']";
     //========================
     public static final String RUBRICATOR_OF_ORG_LEVEL_TAB = "(//fieldset[@class='fpspm-fieldset']/legend)[3]";
-    public static final String SELECT_ORG_OBJECTS = "(//span[contains(text(),'Выбрать организационные объекты')])[1]";
+    public static final String SELECT_ORG_OBJECTS = "(//span[contains(text(),'Выбрать')])[1]";
     //========================
     public static final String EXCHANGE_OF_MATERIALS_IN_BANK_OF_RUSSIA = "//a[contains(text(),'Обмен материалами в Банке России')]";
     public static final String MATERIALS_FOR_GROUP = "(//tr/td[2]/button[@title='Добавить'])[1]";
@@ -94,7 +116,7 @@ public class Constants {
     public static final String SELECT_RUBRICATOR_DISPLAYED = "//tr/td[2][contains(text(),'Рубрика')]";
     public static final String SELECT_RUBRICATOR_SAVE = "(//button/span[contains(text(),'Сохранить')])[5]";
     public static final String SELECTED_RUBRICATOR_DISPLAYED = "//div/p[contains(text(),'Рубрика')]";
-    public static final String TRASH_HOLDER_OF_SELECTED_RUBRICATOR_DISPLAYED = "//button[@data-action='removeSelectedRubrics']";
+    public static final String TRASH_HOLDER_OF_SELECTED_RUBRICATOR_DISPLAYED = "//button[@class='fpspm-button fpspm-delete-btn']";
     //========================
     public static final String RELATED_MATERIALS_TAB = "(//fieldset[@class='fpspm-fieldset']/legend)[7]";
     public static final String RELATED_MATERIALS_TAB_INPUTFIELD = "//input[@name='materialId']";
@@ -110,9 +132,9 @@ public class Constants {
     public static final String REQUIRE_FIELD_3 = "(//label[contains(text(),'Это поле необходимо заполнить.')])[3]";
 
     //========================Error prompts for fields
-    public static final String ORG_OBJECT_PROMPT = "//ul[@class='fpspm-form-errors']/li[contains(text(),'Необходимо выбрать организационный объект')]";
-    public static final String ATTACH_FIELS_PROMPT = "//ul[@class='fpspm-form-errors']/li[contains(text(),'Необходимо прикрепить файлы')]";
-    public static final String NEED_TO_SELECT_THEME_RUBRIC_PROMPT = "//ul[@class='fpspm-form-errors']/li[contains(text(),'Необходимо выбрать тематическую рубрику')]";
+    public static final String ORG_OBJECT_PROMPT = "//div[contains(text(),'Необходимо выбрать организационный объект')]";
+    public static final String ATTACH_FIELS_PROMPT = "//div[contains(text(),'Необходимо прикрепить файлы')]";
+    public static final String NEED_TO_SELECT_THEME_RUBRIC_PROMPT = "//div[contains(text(),'Необходимо выбрать тематическую рубрику')]";
 
 
     //========================THEME RUBRIC PAGE=============================================

@@ -40,6 +40,9 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = COORDINATOR_ROLE_INDICATOR)
     private WebElement cordinatorRoleIndicator;
 
+    @FindBy(xpath = CONTENT_OPERATOR_SZPP_ROLE_INDICATOR)
+    private WebElement contentOperatorSzppRoleIndicator;
+
     //========================
 
     public void loginIntoSite(String userLogin) {
@@ -95,5 +98,11 @@ public class LoginPage extends BasePage {
         logger.info("Check Cordinator Role");
         elementVisibility(cordinatorRoleIndicator, driver);
         assertTrue(cordinatorRoleIndicator.getText().contains("Координатор ДБН"));
+    }
+
+    public void checkContentOperatorContentSZPP() {
+        logger.info("Check Content Operator SZPP Role");
+        elementVisibility(contentOperatorSzppRoleIndicator, driver);
+        assertTrue(contentOperatorSzppRoleIndicator.getText().contains("Оператор контента СЗПП"));
     }
 }

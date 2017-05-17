@@ -29,6 +29,38 @@ public class MainPage extends BasePage {
     @FindBy(xpath = ORG_LEVEL_BLOCK)
     protected WebElement orgBlock;
 
+    @FindBy(xpath = DEPARTMENTS_SZPP_ODFU_LEVEL)
+    protected WebElement departmentsSzzpOdfuLevel;
+
+    @FindBy(xpath = EDIT_DEPARTMENT_BUTTON)
+    protected WebElement editDepartmentButton;
+
+    //========================Editing Window SECTION======
+
+    @FindBy(xpath = EDITING_ORG_UNIT_WINDOW)
+    protected WebElement editingOrgUnitWindow;
+
+    @FindBy(xpath = EDITING_ORG_UNIT_WINDOW_ADD_BUTTON)
+    protected WebElement addButton;
+    //========================ADD WINDOW SECTION
+    @FindBy(xpath = EDITING_ORG_UNIT_WINDOW_INPUT_NAME_FIELD)
+    protected WebElement editingOrgUnitWindowInputNameField;
+
+    @FindBy(xpath = EDITING_ORG_UNIT_WINDOW_INPUT_NUMBER_DEPARTMENT_FIELD)
+    protected WebElement editingOrgUnitWindowInputNumberDepartmentField;
+
+    @FindBy(xpath = SAVE_BUTTON_IN_ADD_WINDOW)
+    protected WebElement saveButtonInAddWindow;
+
+    @FindBy(xpath = CANCEL_BUTTON_IN_ADD_WINDOW)
+    protected WebElement cancelButtonInAddWindow;
+
+    @FindBy(xpath = ADD_WINDOW_ALERT1)
+    protected WebElement addWindowAlert1;
+
+    @FindBy(xpath = ADD_WINDOW_ALERT2)
+    protected WebElement addWindowAlert2;
+
     //========================THEME RUBRICS SECTION=============================================
 
     @FindBy(xpath = THEME_RUBRIC_BLOCK)
@@ -232,8 +264,6 @@ public class MainPage extends BasePage {
         elementVisibility(rubrics, driver);
         elementVisibility(templateButton, driver);
         elementVisibility(editButto, driver);
-
-
     }
 
     public void deleteNewCreatedPublication() {
@@ -241,5 +271,24 @@ public class MainPage extends BasePage {
         elementVisibility(deleteButton, driver).click();
         elementVisibility(deleteNewRubricButton, driver).click();
         elementInvisibility(By.xpath("//div/a[contains(text(),'NewAutotest')]"), driver);
+    }
+
+    public void creationNewDepartment() throws InterruptedException {
+        logger.info("Create new department for SZPP");
+        // Thread.sleep(2000);
+        elementIsClickable(departmentsSzzpOdfuLevel, driver).click();
+        elementIsClickable(editDepartmentButton, driver).click();
+        elementVisibility(editingOrgUnitWindow, driver);
+        elementIsClickable(addButton, driver).click();
+
+        elementIsClickable(saveButtonInAddWindow, driver).click();
+        elementVisibility(addWindowAlert1, driver);
+        elementVisibility(addWindowAlert2, driver);
+
+        elementVisibility(editingOrgUnitWindowInputNameField, driver).sendKeys("AutoTest2017");
+        elementVisibility(editingOrgUnitWindowInputNumberDepartmentField, driver).sendKeys("154");
+        Thread.sleep(2000);
+        elementIsClickable(saveButtonInAddWindow, driver).click();
+        Thread.sleep(2000);
     }
 }

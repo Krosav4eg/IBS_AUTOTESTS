@@ -15,7 +15,7 @@ public class fpspm130_AnaliticTest extends BaseTest {
     @Test
     public void authorizationAnaliticTest() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.authorization("dbn_analyst_ca","2wsx2SX");
+        loginPage.authorization("dbn_analyst_ca","2wsx2WSX");
         loginPage.checkAnaliticRoleName();
     }
 

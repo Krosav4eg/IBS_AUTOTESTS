@@ -31,6 +31,7 @@ public abstract class BasePage {
     public static final String CONTENT_OPERATOR_LOGIN = "dbn_content_operator";
     public static final String ANALITIC_LOGIN = "dbn_analyst_ca";
     public static final String COORDINATOR_LOGIN = "dbn_coordinator";
+    public static final String SZPP_LOGIN = "szpp_content_operato";
     protected static final String PASSWORD = "2wsx2WSX";
 
     public BasePage(WebDriver driver) {
@@ -50,7 +51,7 @@ public abstract class BasePage {
     }
 
 
-    protected WebElement elementIsClicable(WebElement element, WebDriver driver) {
+    protected WebElement elementIsClickable(WebElement element, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, WAITING_TIMEOUT);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }

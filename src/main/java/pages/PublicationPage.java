@@ -1,7 +1,6 @@
 package pages;
 
 import basePage.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -271,22 +270,22 @@ public class PublicationPage extends BasePage {
         Thread.sleep(1000);
         elementVisibility(materialsForGroupIsDispalyed, driver);
 
-        //  check trash button for org level rubricator
-        elementVisibility(materialsForGroupIsDisplayedDeleteButton, driver).click();
-        elementInvisibility(By.xpath("//tr/td[2][contains(text(),'Материалы для ГУП')]"), driver);
-
-        // create org objects again
-        elementVisibility(selectOrgObjects, driver).click();
-        Thread.sleep(1000);
-        elementVisibility(exchangeOfMaterialsInBankOfRussia, driver).click();
-        elementVisibility(materialsForGroup, driver).click();
-        Thread.sleep(1000);
-        elementVisibility(brDispalyedInTable, driver);
-        elementVisibility(brDisplayedVheckboxInTable, driver);
-        Thread.sleep(1000);
-        elementVisibility(saveOrgTemplateButton, driver).click();
-        Thread.sleep(1000);
-        elementVisibility(materialsForGroupIsDispalyed, driver);
+//        //  check trash button for org level rubricator
+//        elementVisibility(materialsForGroupIsDisplayedDeleteButton, driver).click();
+//        elementInvisibility(By.xpath("//tr/td[2][contains(text(),'Материалы для ГУП')]"), driver);
+//
+//        // create org objects again
+//        elementVisibility(selectOrgObjects, driver).click();
+//        Thread.sleep(1000);
+//        elementVisibility(exchangeOfMaterialsInBankOfRussia, driver).click();
+//        elementVisibility(materialsForGroup, driver).click();
+//        Thread.sleep(1000);
+//        elementVisibility(brDispalyedInTable, driver);
+//        elementVisibility(brDisplayedVheckboxInTable, driver);
+//        Thread.sleep(1000);
+//        elementVisibility(saveOrgTemplateButton, driver).click();
+//        Thread.sleep(1000);
+//        elementVisibility(materialsForGroupIsDispalyed, driver);
 
         //fill description of material level
         elementVisibility(descriptionOfMaterialInputField, driver).sendKeys("Test material");
@@ -410,18 +409,18 @@ public class PublicationPage extends BasePage {
         elementVisibility(selectRubricatorDispalyed, driver);
         Thread.sleep(1000);
 
-        //check trash button for theme rubricator
-        elementVisibility(trashHolderOFselectRubricatorDispalyed, driver).click();
-        elementInvisibility(By.xpath("//div/p[contains(text(),'Рубрика')]"), driver);
-        Thread.sleep(1000);
-
-        //select theme rubric button again
-        elementVisibility(selectThemeRzubricatorButton, driver).click();
-        Thread.sleep(5000);
-        elementVisibility(selectRubricatorPlusButton, driver).click();
-        elementVisibility(selectRubricatorDisplayed, driver);
-        elementVisibility(selectRubricatorSave, driver).click();
-        elementVisibility(selectRubricatorDispalyed, driver);
+//        //check trash button for theme rubricator
+//        elementVisibility(trashHolderOFselectRubricatorDispalyed, driver).click();
+//        elementInvisibility(By.xpath("//div/p[contains(text(),'Рубрика')]"), driver);
+//        Thread.sleep(1000);
+//
+//        //select theme rubric button again
+//        elementVisibility(selectThemeRzubricatorButton, driver).click();
+//        Thread.sleep(5000);
+//        elementVisibility(selectRubricatorPlusButton, driver).click();
+//        elementVisibility(selectRubricatorDisplayed, driver);
+//        elementVisibility(selectRubricatorSave, driver).click();
+//        elementVisibility(selectRubricatorDispalyed, driver);
 
         //create publication
         elementVisibility(savePublicationButton, driver).click();

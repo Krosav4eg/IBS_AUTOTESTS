@@ -7,25 +7,26 @@
         <listener class-name="listner.ListenerTest"/>
     </listeners>
 
+    <!--Role Separation Test-->
 
-    <!--<test name="OperatorContentTest" >-->
-    <!--<parameter name="browser" value="chrome"/>-->
-    <!--<classes>-->
-    <!--<class name="regressionSuit.fpspm130_OperatorContentTest"/>-->
-    <!--</classes>-->
+    <!--<test name="OperatorContentTest">-->
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<classes>-->
+            <!--<class name="regressionSuit.fpspm130_OperatorContentTest"/>-->
+        <!--</classes>-->
     <!--</test>-->
     <!--<test name="CordinatorTest">-->
-    <!--<parameter name="browser" value="chrome"/>-->
-    <!--<classes>-->
-    <!--<class name="regressionSuit.fpspm130_CordinatorTest"/>-->
-    <!--</classes>-->
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<classes>-->
+            <!--<class name="regressionSuit.fpspm130_CordinatorTest"/>-->
+        <!--</classes>-->
     <!--</test>-->
-    <test name="AnaliticTest">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="regressionSuit.fpspm130_AnaliticTest"/>
-        </classes>
-    </test>
+    <!--<test name="AnaliticTest">-->
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<classes>-->
+            <!--<class name="regressionSuit.fpspm130_AnaliticTest"/>-->
+        <!--</classes>-->
+    <!--</test>-->
 
     <!--workWithRubricatorTestSuit-->
 
@@ -70,11 +71,11 @@
     <!--</test>-->
 
 
-    <!--<test name="PublicationOfMaterialOfContentOperator" >-->
-        <!--<parameter name="browser" value="chrome"/>-->
-        <!--<classes>-->
-            <!--<class name="regressionSuit.fpspm131_PublicationOfMaterialOfContentOperator"/>-->
-        <!--</classes>-->
-    <!--</test>-->
+    <test name="PublicationOfMaterialOfContentOperator" >
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="regressionSuit.fpspm131_PublicationOfMaterialOfContentOperator"/>
+        </classes>
+    </test>
 
 </suite>
